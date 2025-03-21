@@ -2,7 +2,9 @@ name: "Protocol Buffer Go Stubs Generation"
 on:
   push:
     tags:
-      - v**  # Trigger on version tags (e.g., v1.0.0)
+        - 'order/v*'
+        - 'payment/v*'
+        - 'shipping/v*'
 
 jobs:
   protoc:

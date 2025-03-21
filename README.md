@@ -16,11 +16,10 @@ Each service is designed for resilience, fully unit and integration tested, and 
 
 ## TODO [features which are under development ]
 
-- [ ] Follow **Domain-Driven Design (DDD)** to structure business logic effectively.
-- [ ] Implement **Hexagonal Architecture** to ensure clear separation of core logic and external adapters.
-- done for ?? ?######
-- [ ] Set up **gRPC** for high-performance communication between microservices.
-- [ ] Develop **Resilience** strategies to handle failures gracefully during service-to-service calls.
-- [ ] Write **Comprehensive Tests**, including unit and integration tests for each layer.
-- [ ] Configure **Kubernetes** for containerized deployment with resource definitions for scaling.
-- [ ] Set up **CI/CD** for automated builds, tests, and deployments.
+-  Follow **Domain-Driven Design (DDD)** to structure business logic effectively. - done partially
+-  Implement **Hexagonal Architecture** to ensure clear separation of core logic and external adapters. - done partially
+-  Set up **gRPC** for high-performance communication between microservices.
+-  Develop **Resilience** strategies to handle failures gracefully during service-to-service calls.
+-  Write **Comprehensive Tests**, including unit and integration tests for each layer.
+-  Configure **Kubernetes** for containerized deployment with resource definitions for scaling.
+-  Set up **CI/CD** for automated builds, tests, and deployments.
