@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        service: ["order" , "payment", "shipping"]  
+        service: ["order" ] # , "payment", "shipping"]
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4  # Ensure compatibility with Node.js 20
@@ -30,3 +30,6 @@ jobs:
         run: |
           chmod +x "${GITHUB_WORKSPACE}/run.sh"
           ./run.sh ${{ matrix.service }} ${{ env.RELEASE_VERSION }}
+
+#remote: Permission to abdelrahmanShawki/eSHOP.git denied to github-actions[bot].
+#fatal: unable to access 'https://github.com/abdelrahmanShawki/eSHOP/': The requested URL returned error: 403
