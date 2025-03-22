@@ -4,28 +4,23 @@ import (
 	"github.com/abdelrahmanShawki/eSHOP/order/config"
 	"github.com/abdelrahmanShawki/eSHOP/order/internal/adapter/db"
 	"github.com/abdelrahmanShawki/eSHOP/order/internal/adapter/grpc"
-	"github.com/abdelrahmanShawki/eSHOP/order/internal/application/core/service"
+	"github.com/abdelrahmanShawki/eSHOP/order/internal/adapter/payment"
+	"github.com/abdelrahmanShawki/eSHOP/order/internal/application/core/api"
 	"log"
 )
 
 func main() {
-	log.Println("Starting application...")
-
-	dataSourceURL := config.GetDataSourceURL()
-	log.Println("Using Data Source URL:", dataSourceURL)
-
-	dbAdapter, err := db.NewAdapter(dataSourceURL)
+	dbAdapter, err := db.NewAdapter(config.GetDataSourceURL())
 	if err != nil {
 		log.Fatalf("Failed to connect to database. Error: %v", err)
 	}
 
-	log.Println("Database connected successfully")
+	paymentAdapter, err := payment.NewAdapter(config.GetPaymentServiceUrl())
+	if err != nil {
+		log.Fatalf("Failed to initialize payment stub. Error: %v", err)
+	}
 
-	orderService := service.NewOrderService(dbAdapter)
-	grpcAdapter := grpc.NewAdapter(orderService, config.GetApplicationPort())
-
-	log.Println("Starting gRPC server...")
+	application := api.NewApplication(paymentAdapter, dbAdapter)
+	grpcAdapter := grpc.NewAdapter(application, config.GetApplicationPort())
 	grpcAdapter.Run()
-
-	log.Println("Application is running")
 }

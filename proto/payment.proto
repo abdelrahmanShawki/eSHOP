@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package payment;
+
+option go_package = "github.com/abdelrahmanShawki/eSHOP/payment/internal/adapter/grpc/pb";
+
+service Payment {
+  rpc Create(CreatePaymentRequest) returns (CreatePaymentResponse);
+}
+
+message CreatePaymentRequest {
+  string userId = 1;
+  string orderId = 2;
+  double totalPrice = 3;
+}
+
+message CreatePaymentResponse {
+  //  status, confirmation ID, etc.
+}

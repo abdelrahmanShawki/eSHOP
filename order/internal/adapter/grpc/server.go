@@ -12,13 +12,13 @@ import (
 )
 
 type Adapter struct {
-	service port.ServicePort
-	port    int
+	api  port.APIPort
+	port int
 	pb.UnimplementedOrderServer
 }
 
-func NewAdapter(api port.ServicePort, port int) *Adapter {
-	return &Adapter{service: api, port: port}
+func NewAdapter(api port.APIPort, port int) *Adapter {
+	return &Adapter{api: api, port: port}
 }
 
 func (a Adapter) Run() {

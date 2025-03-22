@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        service: ["order" ] # , "payment", "shipping"]
+        service: ["order"  , "payment",] # "shipping"]
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4  # Ensure compatibility with Node.js 20
