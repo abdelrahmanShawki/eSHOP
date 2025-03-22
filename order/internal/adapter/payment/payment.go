@@ -2,7 +2,7 @@ package payment
 
 import (
 	"github.com/abdelrahmanShawki/eSHOP/order/internal/application/core/domain"
-	"github.com/abdelrahmanShawki/eSHOP/payment/internal/adapter/grpc/pb"
+
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
