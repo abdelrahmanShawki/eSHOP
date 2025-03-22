@@ -8,17 +8,17 @@ import (
 
 // GetEnv retrieves the "ENV" environment variable.
 func GetEnv() string {
-	return getEnvironmentValue("ENV") // ❶
+	return getEnvironmentValue("ENV")
 }
 
 // GetDataSourceURL retrieves the "DATA_SOURCE_URL" environment variable.
 func GetDataSourceURL() string {
-	return getEnvironmentValue("DATA_SOURCE_URL") // ❷
+	return getEnvironmentValue("DATA_SOURCE_URL")
 }
 
 // GetApplicationPort retrieves the "APPLICATION_PORT" and converts it to an integer.
 func GetApplicationPort() int {
-	portStr := getEnvironmentValue("APPLICATION_PORT") // ❸
+	portStr := getEnvironmentValue("APPLICATION_PORT")
 	port, err := strconv.Atoi(portStr)
 
 	if err != nil {
@@ -35,4 +35,8 @@ func getEnvironmentValue(key string) string {
 	}
 
 	return os.Getenv(key)
+}
+
+func GetPaymentServiceUrl() string {
+	return getEnvironmentValue("PAYMENT_SERVICE_URL")
 }
