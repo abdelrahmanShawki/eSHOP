@@ -2,13 +2,13 @@ package payment
 
 import (
 	"github.com/abdelrahmanShawki/eSHOP/order/internal/application/core/domain"
-	// "github.com/abdelrahmanShawki/eSHOP/payment/pb
+	"github.com/abdelrahmanShawki/eSHOP/payment/pb"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
 
 type Adapter struct {
-	payment Payment.PaymentClient
+	payment payment.PaymentClient
 }
 
 func NewAdapter(paymentServiceUrl string) (*Adapter, error) {
