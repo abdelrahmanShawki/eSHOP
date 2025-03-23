@@ -1,5 +1,7 @@
 filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
 filippo.io/edwards25519 v1.1.0/go.mod h1:BxyFTGdWcka3PhytdK4V28tE5sGfRvvvRV7EaN4VDT4=
+github.com/abdelrahmanShawki/eSHOP/payment v1.0.0 h1:w3iIwuHi8Ebwq8nGWGqGi7OGo1VSPaRU2f8x9+N4/AU=
+github.com/abdelrahmanShawki/eSHOP/payment v1.0.0/go.mod h1:OEKt0Kj7VGGalKZ9QDdNJrXZSe+BuanoWVBr5qYTkX4=
 github.com/go-logr/logr v1.4.2 h1:6pFjapn8bFcIbiKo3XT4j/BhANplGihG6tvd+8rYgrY=
 github.com/go-logr/logr v1.4.2/go.mod h1:9T104GzyrTigFIr8wt5mBrctHMim0Nb2HLGrmQ40KvY=
 github.com/go-logr/stdr v1.2.2 h1:hSWxHoqTgW2S2qGc0LTAI563KZ5YKYRhT3MFKZMbjag=

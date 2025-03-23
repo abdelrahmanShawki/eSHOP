@@ -2,7 +2,7 @@ package ports
 
 import (
 	"context"
-	"github.com/huseyinbabal/microservices/payment/internal/application/core/domain"
+	"github.com/abdelrahmanShawki/eSHOP/payment/internal/application/core/domain"
 )
 
 type DBPort interface {
